@@ -51,13 +51,12 @@ export default function Newsletter() {
 
           {subscribed && (
             <div className="mt-4 text-zinc-700 font-medium animate-pulse">
-              🎉 ¡Gracias por suscribirte! Revisa tu correo.
+              ¡Gracias por suscribirte! Revisa tu correo.
             </div>
           )}
 
           <p className="text-xs text-gray-500 mt-4">
-            Prometemos no enviar spam. Puedes cancelar tu suscripción cuando
-            quieras.
+            Puedes cancelar tu suscripción cuando quieras.
           </p>
         </div>
       </div>

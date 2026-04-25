@@ -10,10 +10,10 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white shadow-md">
-      <div className="container mx-auto px-4">
+    <nav className="sticky top-0 z-50 bg-white/70 backdrop-blur-md border-b border-blue-100/60">
+      <div className="container mx-auto px-6 lg:px-12">
         <div className="flex justify-between items-center h-16">
-          {/* Logo - cambiado a Línea */}
+          {/* Logo */}
           <Link
             href="/"
             className="text-2xl font-serif font-semibold text-gray-800 tracking-wide"
@@ -23,50 +23,48 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-gray-700 hover:text-gray-900">
-              Inicio
-            </Link>
-            <Link
-              href="/products"
-              className="text-gray-700 hover:text-gray-900"
-            >
-              Productos
-            </Link>
-            <Link href="/about" className="text-gray-700 hover:text-gray-900">
-              Nosotros
-            </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-gray-900">
-              Contacto
-            </Link>
+            {[
+              { href: "/", label: "Inicio" },
+              { href: "/products", label: "Productos" },
+              { href: "/about", label: "Nosotros" },
+              { href: "/contact", label: "Contacto" },
+            ].map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className="text-sm text-gray-500 hover:text-gray-900 tracking-wide transition-colors duration-200 border-b-2 border-transparent hover:border-blue-300 pb-0.5"
+              >
+                {label}
+              </Link>
+            ))}
           </div>
 
           {/* Actions */}
-          <div className="flex items-center gap-4">
-            <button className="p-2 hover:bg-gray-100 rounded-full">
-              <Search className="w-5 h-5 text-gray-700" />
+          <div className="flex items-center gap-2">
+            <button className="p-2 hover:bg-blue-50 rounded-full transition-colors duration-200">
+              <Search className="w-4 h-4 text-gray-500" />
             </button>
 
             <Link
               href="/cart"
-              className="relative p-2 hover:bg-gray-100 rounded-full"
+              className="relative p-2 hover:bg-blue-50 rounded-full transition-colors duration-200"
             >
-              <ShoppingCart className="w-5 h-5 text-gray-700" />
+              <ShoppingCart className="w-4 h-4 text-gray-500" />
               {totalItems > 0 && (
-                <span className="absolute -top-1 -right-1 bg-gray-800 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 bg-blue-400 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
                   {totalItems}
                 </span>
               )}
             </Link>
 
-            {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 hover:bg-gray-100 rounded-full"
+              className="md:hidden p-2 hover:bg-blue-50 rounded-full transition-colors duration-200"
             >
               {isMenuOpen ? (
-                <X className="w-5 h-5" />
+                <X className="w-4 h-4 text-gray-500" />
               ) : (
-                <Menu className="w-5 h-5" />
+                <Menu className="w-4 h-4 text-gray-500" />
               )}
             </button>
           </div>
@@ -74,29 +72,23 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t">
-            <div className="flex flex-col gap-3">
-              <Link href="/" className="text-gray-700 hover:text-gray-900 py-2">
-                Inicio
-              </Link>
-              <Link
-                href="/products"
-                className="text-gray-700 hover:text-gray-900 py-2"
-              >
-                Productos
-              </Link>
-              <Link
-                href="/about"
-                className="text-gray-700 hover:text-gray-900 py-2"
-              >
-                Nosotros
-              </Link>
-              <Link
-                href="/contact"
-                className="text-gray-700 hover:text-gray-900 py-2"
-              >
-                Contacto
-              </Link>
+          <div className="md:hidden py-4 border-t border-blue-100/60">
+            <div className="flex flex-col gap-1">
+              {[
+                { href: "/", label: "Inicio" },
+                { href: "/products", label: "Productos" },
+                { href: "/about", label: "Nosotros" },
+                { href: "/contact", label: "Contacto" },
+              ].map(({ href, label }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className="text-sm text-gray-500 hover:text-gray-900 hover:bg-blue-50 px-3 py-2 rounded-lg transition-colors duration-200"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {label}
+                </Link>
+              ))}
             </div>
           </div>
         )}

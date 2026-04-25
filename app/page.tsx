@@ -6,6 +6,7 @@ import ProductGrid from "@/components/ProductGrid";
 import CategoryFilter from "@/components/CategoryFilter";
 import Newsletter from "@/components/Newsletter";
 import productsData from "@/data/products.json";
+import CTASection from "@/components/CTASection";
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState("todos");
@@ -113,6 +114,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <CTASection />
 
       <Newsletter />
     </main>
