@@ -1,57 +1,48 @@
 "use client";
 
-import { ArrowRight, Package, ShoppingBag } from "lucide-react";
+import { ArrowRight, MoveRight } from "lucide-react";
 
 export default function CTASection() {
   return (
-    <div className="container mx-auto px-6 lg:px-12 py-16 md:py-24">
-      <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 shadow-2xl">
-        {/* Elementos decorativos de fondo */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-400/5 rounded-full blur-3xl" />
+    <div className="container mx-auto px-6 lg:px-12 py-24 md:py-32">
+      <div className="relative overflow-hidden bg-stone-900 py-20 px-8 md:px-20 text-center md:text-left">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-stone-800/30 skew-x-[-20deg] translate-x-1/4" />
 
-        <div className="relative z-10 px-6 md:px-12 py-12 md:py-16 text-center md:text-left">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Columna de texto */}
-            <div>
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-1.5 mb-6">
-                <Package className="w-4 h-4 text-blue-300" />
-                <span className="text-xs uppercase tracking-wider text-blue-200 font-medium">
-                  ¿Necesitas una cotización?
-                </span>
-              </div>
+        <div className="relative z-10">
+          <div className="max-w-3xl">
+            <span className="text-[10px] uppercase tracking-[0.4em] text-stone-600 font-bold mb-6 block">
+              Proyectos a Medida
+            </span>
 
-              <h2 className="text-3xl md:text-4xl font-light tracking-tight text-white">
-                Ventas por volumen y <br />
-                <span className="font-serif italic text-blue-300">
-                  proyectos especiales
-                </span>
-              </h2>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-tight">
+              Soluciones para espacios <br />
+              <span className="font-serif italic text-sky-400">
+                publicos y privados
+              </span>
+            </h2>
 
-              <p className="text-gray-300 text-base mt-4 mb-8 max-w-md leading-relaxed">
-                Contáctanos directamente para recibir asesoría personalizada,
-                precios especiales por cantidad y tiempos de entrega.
-              </p>
+            <p className="text-stone-300 text-lg mt-8 mb-12 max-w-xl leading-relaxed font-normal">
+              Ofrecemos asesoría personalizada y asistencia para
+              equipamiento. Transformamos su visión en realidad.
+            </p>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition flex items-center justify-center gap-2 group">
-                  Solicitar cotización
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </button>
-                <button className="border border-white/30 text-white px-6 py-3 rounded-full font-medium hover:bg-white/10 transition">
-                  Ver catálogo completo
-                </button>
-              </div>
-            </div>
-
-            {/* Columna visual (opcional) */}
-            <div className="hidden md:flex justify-center">
-              <div className="relative w-48 h-48">
-                <div className="absolute inset-0 bg-linear-to-tr from-blue-500/20 to-transparent rounded-full blur-2xl" />
-                <ShoppingBag className="w-24 h-24 text-white/10 mx-auto mt-12" />
-              </div>
+            <div className="flex flex-col sm:flex-row gap-12 justify-center">
+              <button className="px-8 py-4 text-[10px] uppercase tracking-[0.2em] font-bold text-white border border-stone-700 hover:border-stone-500 transition-colors">
+                Contactar
+              </button>
+              <button className="px-8 py-4 text-[10px] uppercase tracking-[0.2em] font-bold text-white border border-stone-700 hover:border-stone-500 transition-colors">
+                Ver Catálogo
+              </button>
             </div>
           </div>
+        </div>
+
+        {/* Vertical text accent */}
+        <div className="absolute right-8 bottom-8 hidden lg:block">
+          <span className="text-[10px] uppercase tracking-[0.5em] text-stone-800 font-bold rotate-90 inline-block transform-gpu origin-right">
+            LÍNEA PRO
+          </span>
         </div>
       </div>
     </div>

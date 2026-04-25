@@ -1,90 +1,53 @@
 "use client";
 
 import Image from "next/image";
-import { TrendingUp, Truck, MapPin, Phone } from "lucide-react";
+import { MoveRight, MapPin, Phone } from "lucide-react";
 
 export default function Hero() {
   return (
-    <div className="relative z-10">
-      <div className="container mx-auto px-6 lg:px-12 py-16 md:py-20">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+    <div className="relative overflow-hidden">
+      {/* Decorative background element */}
+      <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[1000px] h-[1000px] bg-stone-100/50 rounded-full blur-3xl -z-10" />
+
+      <div className="container mx-auto px-6 lg:px-12 py-20 md:py-32">
+        <div className="grid lg:grid-cols-12 gap-16 items-center">
           {/* Columna de texto */}
-          <div className="animate-fade-in-up">
-            {/* Badge de contacto */}
-            <div className="flex items-center gap-4 mb-6 flex-wrap">
-              <div className="flex items-center gap-2 text-sm text-gray-500 bg-white/40 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-100">
-                <MapPin className="w-3.5 h-3.5 text-blue-400" />
-                <span>Av. Providencia 1234, Of. 56</span>
+          <div className="lg:col-span-6 animate-fade-in-up">
+            <div className="flex flex-wrap items-center gap-6 mb-10">
+              <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-stone-500 font-medium bg-stone-100/80 backdrop-blur-sm px-4 py-2 rounded-sm border border-stone-200/50">
+                <MapPin className="w-3 h-3" />
+                <span>Santiago, Chile</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-gray-500 bg-white/40 backdrop-blur-sm px-3 py-1.5 rounded-full border border-blue-100">
-                <Phone className="w-3.5 h-3.5 text-blue-400" />
+              <div className="hidden sm:flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-stone-500 font-medium">
+                <Phone className="w-3 h-3" />
                 <span>+56 2 1234 5678</span>
               </div>
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-tight text-gray-700 leading-[1.2]">
-              Soluciones <br />
-              <span className="relative inline-block">
-                <span className="relative z-10 font-serif font-medium italic text-blue-400">
-                  prácticas
-                </span>
-                <svg
-                  className="absolute bottom-2 left-0 w-full h-3 z-0"
-                  viewBox="0 0 200 10"
-                  preserveAspectRatio="none"
-                >
-                  <path
-                    d="M0 5 Q 50 10, 100 5 T 200 5"
-                    stroke="#93c5fd"
-                    strokeWidth="3"
-                    fill="none"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </span>
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-normal tracking-tight text-stone-700 leading-[1.1] mb-8">
+              Catalogo de
               <br />
-              para tu negocio
+              <span className="font-serif italic text-sky-400">soluciones</span>
             </h1>
 
             <div className="animate-fade-in-up-delay">
-              <p className="text-gray-500 text-lg mt-6 mb-8 leading-relaxed max-w-md">
-                Revise nuestro catálogo y encuentre una solución para sus
-                espacios.
+              <p className="text-stone-600 text-lg md:text-xl mt-6 mb-12 leading-relaxed max-w-lg font-normal">
+                Revise nuestro catalogo y descrubra soluciones para sus espacios
               </p>
             </div>
 
-            {/* Mini-features */}
-            <div className="flex flex-wrap gap-6 mb-10">
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <TrendingUp className="w-4 h-4 text-blue-500" />
-                <span>Precios por volumen</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <Truck className="w-4 h-4 text-blue-500" />
-                <span>Envíos a regiones</span>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 items-start animate-fade-in-up-delay">
+              <button className="btn-primary group px-10">
+                Explorar Catálogo
+                <MoveRight className="ml-4 w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </button>
+              <button className="btn-secondary">Nosotros</button>
             </div>
-
-            <button className="btn-primary group gap-8">
-              Ver catálogo
-              <svg
-                className="w-4 h-4 transition-transform group-hover:translate-x-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeWidth="1.2"
-                  d="M17 12H7M17 12L13 8M17 12L13 16"
-                />
-              </svg>
-            </button>
           </div>
 
-          {/* Columna de imagen */}
-          <div className="relative h-150 w-full animate-fade-in-up-delay">
-            {/* 1. The "Base" Image (Top Right) */}
+          {/* Columna de imagen - Composición Editorial */}
+          <div className="lg:col-span-6 relative h-150 w-full animate-fade-in-up-delay">
+            {/* 1. The Main Architectural Image */}
             <div className="absolute top-0 right-0 w-[65%] h-[60%] overflow-hidden bg-gray-100 rounded-2xl shadow-sm">
               <Image
                 src="/decoracion.jpg"
@@ -95,8 +58,7 @@ export default function Hero() {
               />
             </div>
 
-            {/* 2. The "Subject" Image (Bottom Left) */}
-            {/* Lowered z-index slightly to let the 3rd image pop */}
+            {/* 2. The Detail/Focus Image */}
             <div className="absolute bottom-10 left-0 w-[55%] h-[50%] overflow-hidden bg-white rounded-2xl shadow-xl border-4 border-white z-10">
               <Image
                 src="/sillas.jpg"
@@ -106,8 +68,6 @@ export default function Hero() {
               />
             </div>
 
-            {/* 3. The "Detail" Image (Floating Right/Center) */}
-            {/* A vertical, smaller accent that creates the 'chic' editorial look */}
             <div className="absolute bottom-0 right-12 w-[30%] h-[40%] overflow-hidden bg-white rounded-2xl shadow-2xl border-4 border-white z-20 translate-y-4">
               <Image
                 src="/silla.jpg"
@@ -116,9 +76,6 @@ export default function Hero() {
                 className="object-cover hover:scale-125 transition-transform duration-[3s] ease-out"
               />
             </div>
-
-            {/* Subtle decorative element */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gray-50 rounded-full -z-10 blur-3xl opacity-40" />
           </div>
         </div>
       </div>

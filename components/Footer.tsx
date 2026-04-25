@@ -2,60 +2,86 @@ import { MapPin, Phone, Mail, CreditCard } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 mt-20">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-stone-900 text-stone-400 mt-32">
+      <div className="container mx-auto px-6 lg:px-12 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
           {/* About */}
-          <div>
-            <h3 className="footer-title mb-4 text-white">Línea</h3>
-
-            <p className="text-sm">
-              Mobiliario y equipamiento para espacios públicos y privados.
+          <div className="space-y-6">
+            <h3 className="text-white text-sm uppercase tracking-[0.3em] font-bold">
+              Línea
+            </h3>
+            <p className="text-sm leading-relaxed font-light">
+              Soluciones mobiliarias profesionales y a la medida.
             </p>
           </div>
 
           {/* Contact */}
-          <div>
-            <h3 className="footer-title mb-4 text-white">Contacto</h3>
-            <div className="space-y-2 text-sm">
-              <p className="flex items-center gap-2">
-                <MapPin className="w-4 h-4" /> Santiago, Chile
+          <div className="space-y-6">
+            <h3 className="text-white text-sm uppercase tracking-[0.3em] font-bold">
+              Contacto
+            </h3>
+            <div className="space-y-4 text-xs tracking-wider font-medium">
+              <p className="flex items-center gap-3">
+                <MapPin className="w-3.5 h-3.5 text-stone-500" /> Santiago,
+                Chile
               </p>
-              <p className="flex items-center gap-2">
-                <Phone className="w-4 h-4" /> +56 2 1234 5678
+              <p className="flex items-center gap-3">
+                <Phone className="w-3.5 h-3.5 text-stone-500" /> +56 2 1234 5678
               </p>
-              <p className="flex items-center gap-2">
-                <Mail className="w-4 h-4" /> hola@linea.cl
+              <p className="flex items-center gap-3">
+                <Mail className="w-3.5 h-3.5 text-stone-500" />{" "}
+                contacto@linea.cl
               </p>
             </div>
           </div>
 
           {/* Products hint */}
-          <div>
-            <h3 className="footer-title mb-4 text-white">Productos y servicios</h3>
-            <div className="space-y-2 text-sm">
-              <p>Mobiliario urbano</p>
-              <p>Equipamiento para eventos</p>
+          <div className="space-y-6">
+            <h3 className="text-white text-sm uppercase tracking-[0.3em] font-bold">
+              Servicios
+            </h3>
+            <div className="space-y-4 text-xs tracking-wider font-medium">
+              <p className="hover:text-white transition-colors cursor-pointer">
+                Adquisición
+              </p>
+              <p className="hover:text-white transition-colors cursor-pointer">
+                Instalación
+              </p>
+              <p className="hover:text-white transition-colors cursor-pointer">
+                Proyectos a Medida
+              </p>
             </div>
           </div>
 
           {/* Newsletter teaser */}
-          <div>
-            <h3 className="footer-title mb-4 text-white">Próximamente</h3>
-            <div className="space-y-2 text-sm">
-              <p className="flex items-center gap-2">
-                <CreditCard className="w-4 h-4" /> Webpay Plus
+          <div className="space-y-6">
+            <h3 className="text-white text-sm uppercase tracking-[0.3em] font-bold">
+              Ecosistema
+            </h3>
+            <div className="space-y-4 text-xs tracking-wider font-medium">
+              <p className="flex items-center gap-3">
+                <CreditCard className="w-3.5 h-3.5 text-stone-500" /> Pagos
+                Flexibles
               </p>
-              <p>Facturación SII</p>
-              <p>Presupuestos para negocios</p>
+              <p>Facturación Electrónica</p>
+              <p>Logística Nacional</p>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
-          <p className="mt-1">
-            © {new Date().getFullYear()} Nombre comercial.
+        <div className="border-t border-stone-800 mt-20 pt-10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-[0.2em] font-medium">
+          <p>
+            © {new Date().getFullYear()} LÍNEA MOBILIARIO. TODOS LOS DERECHOS
+            RESERVADOS.
           </p>
+          <div className="flex gap-8">
+            <span className="cursor-pointer hover:text-white transition-colors">
+              Privacidad
+            </span>
+            <span className="cursor-pointer hover:text-white transition-colors">
+              Términos
+            </span>
+          </div>
         </div>
       </div>
     </footer>
