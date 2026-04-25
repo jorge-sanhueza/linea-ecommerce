@@ -1,0 +1,58 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Silla Blanca",
+      "price": 45900,
+      "category": "Sillas",
+      "description": "Silla elegante para eventos, bodas y banquetes. Apilable hasta 10 unidades.",
+      "image": "/blanca.jpg",
+      "stock": 20
+    },
+    {
+      "id": 2,
+      "name": "Silla Apilable Negra",
+      "price": 29900,
+      "category": "Sillas",
+      "description": "Silla industrial resistente para eventos masivos. Fácil limpieza y almacenaje.",
+      "image": "/apilable.jpg",
+      "stock": 5
+    },
+    {
+      "id": 3,
+      "name": "Silla de Plástico Transparente",
+      "price": 39900,
+      "category": "Sillas",
+      "description": "Silla moderna y ligera, ideal para eventos al aire libre y decoraciones contemporáneas.",
+      "image": "/transparente.jpg",
+      "stock": 15
+    },
+    {
+      "id": 4,
+      "name": "Silla de Acero Inoxidable",
+      "price": 54900,
+      "category": "Sillas",
+      "description": "Silla robusta y duradera, perfecta para eventos industriales o temáticos.",
+      "image": "/acero.jpg",
+      "stock": 10
+    },
+    {
+      "id": 5,
+      "name": "Silla de Terraza",
+      "price": 68900,
+      "category": "Sillas",
+      "description": "Resistente a la intemperie, ideal para restaurantes y terrazas.",
+      "image": "/terraza.jpg",
+      "stock": 12
+    },
+    {
+      "id": 6,
+      "name": "Silla de Madera Clásica",
+      "price": 54900,
+      "category": "Sillas",
+      "description": "Silla de madera con diseño clásico, perfecta para eventos formales.",
+      "image": "/madera.jpg",
+      "stock": 8
+    }
+  ]
+}
