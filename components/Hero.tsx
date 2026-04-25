@@ -5,12 +5,8 @@ import { TrendingUp, Truck } from "lucide-react";
 
 export default function Hero() {
   return (
-    <div className="relative overflow-hidden bg-linear-to-br from-white via-blue-50/30 to-[#f0f9ff]">
-      {/* Elementos decorativos de fondo */}
-      <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-40" />
-      <div className="absolute bottom-0 left-0 -translate-x-1/4 translate-y-1/2 w-80 h-80 bg-blue-50 rounded-full blur-3xl opacity-40" />
-
-      <div className="container mx-auto px-6 lg:px-12 py-20 md:py-28 relative z-10">
+    <div className="relative z-10">
+      <div className="container mx-auto px-6 lg:px-12 py-20 md:py-28">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Columna de texto */}
           <div className="animate-fade-in-up">
@@ -74,12 +70,12 @@ export default function Hero() {
           </div>
 
           {/* Columna de imagen */}
-          <div className="relative">
+          <div className="relative animate-fade-in-up-delay">
             {/* Marco decorativo */}
             <div className="absolute -top-4 -left-4 w-full h-full border border-blue-200 rounded-2xl -z-10" />
             <div className="absolute -bottom-4 -right-4 w-full h-full bg-blue-100/30 rounded-2xl -z-10" />
 
-            <div className="relative w-full h-125 overflow-hidden bg-gray-100 animate-fade-in-up">
+            <div className="relative w-full h-125 overflow-hidden bg-gray-100 rounded-2xl">
               <Image
                 src="/sillas.jpg"
                 alt="Sillas profesionales para eventos y espacios"

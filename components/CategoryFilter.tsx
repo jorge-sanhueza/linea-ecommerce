@@ -2,8 +2,8 @@
 
 const categories = [
   { id: "todos", name: "Todos" },
-  { id: "Sillas", name: "Sillas" },
-  { id: "Basureros", name: "Basureros" },
+  { id: "Sillas", name: "Muebles" },
+  { id: "Accesorios", name: "Accesorios" },
 ];
 
 interface CategoryFilterProps {
