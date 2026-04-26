@@ -46,13 +46,13 @@ export default function Home() {
         <div className="text-center md:text-left md:flex md:justify-between md:items-end mb-12 gap-8 scroll-mt-16">
           <div className="animate-fade-in-up">
             <span className="text-xs uppercase tracking-[0.2em] text-blue-400 font-medium">
-              Catálogo
+              En stock
             </span>
             <h2 className="text-3xl md:text-4xl font-light tracking-tight text-gray-800 mt-2">
-              Nuestros productos
+              Productos Destacados
             </h2>
             <p className="text-gray-400 text-sm mt-2 max-w-md">
-              Selección de equipamiento y existencias disponibles
+              Consulte por disponibilidad
             </p>
           </div>
 

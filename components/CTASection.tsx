@@ -5,7 +5,7 @@ import { ArrowRight, Package, ShoppingBag } from "lucide-react";
 export default function CTASection() {
   return (
     <div className="container mx-auto px-6 lg:px-12 py-16 md:py-24">
-      <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 shadow-2xl">
+      <div className="relative overflow-hidden rounded-md bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 shadow-2xl">
         {/* Elementos decorativos de fondo */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-400/5 rounded-full blur-3xl" />
@@ -29,8 +29,9 @@ export default function CTASection() {
               </h2>
 
               <p className="text-gray-300 text-base mt-4 mb-8 max-w-md leading-relaxed">
-                Contáctanos directamente para recibir asesoría personalizada,
-                precios especiales por cantidad y tiempos de entrega.
+                Contáctanos directamente para consultas sobre ventas por
+                volumen, proyectos personalizados, o cualquier otra necesidad
+                especial. Ofrecemos precios por cantidad y tiempos de entrega.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -39,7 +40,7 @@ export default function CTASection() {
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </button>
                 <button className="border border-white/30 text-white px-6 py-3 rounded-full font-medium hover:bg-white/10 transition">
-                  Ver catálogo completo
+                  Ver productos
                 </button>
               </div>
             </div>

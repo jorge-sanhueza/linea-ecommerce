@@ -10,7 +10,7 @@ export default function Footer() {
             <h3 className="footer-title mb-4 text-white">Línea</h3>
 
             <p className="text-sm">
-              Mobiliario y equipamiento para espacios públicos y privados.
+              Soluciones y equipamiento para tus espacios.
             </p>
           </div>
 
@@ -32,10 +32,11 @@ export default function Footer() {
 
           {/* Products hint */}
           <div>
-            <h3 className="footer-title mb-4 text-white">Productos y servicios</h3>
+            <h3 className="footer-title mb-4 text-white">Productos</h3>
             <div className="space-y-2 text-sm">
-              <p>Mobiliario urbano</p>
-              <p>Equipamiento para eventos</p>
+              <p>Sillas</p>
+              <p>Mesas</p>
+              <p>Contenedores de basura</p>
             </div>
           </div>
 
@@ -53,9 +54,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
-          <p className="mt-1">
-            © {new Date().getFullYear()} Nombre comercial.
-          </p>
+          <p className="mt-1">© {new Date().getFullYear()} Nombre comercial.</p>
         </div>
       </div>
     </footer>

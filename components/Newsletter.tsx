@@ -25,7 +25,7 @@ export default function Newsletter() {
             ¿Quieres novedades de Línea?
           </h2>
           <p className="text-gray-600 mb-6">
-            Nuevos modelos y ofertas exclusivas para proyectos.
+            Recibe ofertas exclusivas al instante.
           </p>
 
           <form
