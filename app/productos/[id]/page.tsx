@@ -36,7 +36,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
     <main className="relative bg-linear-to-br from-white via-blue-50/30 to-[#f0f9ff] min-h-screen pt-12">
       <div className="container mx-auto px-6 lg:px-12 py-16">
         <Link
-          href="/products"
+          href="/productos"
           className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-blue-500 transition-colors mb-12 group"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />

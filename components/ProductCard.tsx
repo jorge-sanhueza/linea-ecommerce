@@ -33,7 +33,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     <div className="group relative bg-white/40 backdrop-blur-sm rounded-2xl border border-white/50 overflow-hidden transition-all duration-500 hover:shadow-lg hover:bg-white/60">
       {/* Enlace a detalle - Contenedor de imagen */}
       <Link
-        href={`/products/${product.id}`}
+        href={`/productos/${product.id}`}
         className="block overflow-hidden bg-gray-50"
       >
         <div className="relative aspect-square w-full">

@@ -78,8 +78,8 @@ export default function Navbar() {
             <div className="flex flex-col gap-6 items-center">
               {[
                 { href: "/", label: "Inicio" },
-                { href: "/products", label: "Productos" },
-                { href: "/contact", label: "Contacto" },
+                { href: "/productos", label: "Productos" },
+                { href: "/contacto", label: "Contacto" },
               ].map(({ href, label }) => (
                 <Link
                   key={href}

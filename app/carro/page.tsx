@@ -139,7 +139,7 @@ export default function CartPage() {
 
             <div className="mt-6 text-center">
               <Link
-                href="/products"
+                href="/productos"
                 className="text-[10px] uppercase tracking-widest text-gray-400 hover:text-gray-600 transition-colors font-bold"
               >
                 Continuar Comprando
