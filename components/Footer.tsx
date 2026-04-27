@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail, CreditCard } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -14,29 +15,48 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Contact */}
+          {/* Quick Links */}
           <div>
-            <h3 className="footer-title mb-4 text-white">Contacto</h3>
-            <div className="space-y-2 text-sm">
-              <p className="flex items-center gap-2">
-                <MapPin className="w-4 h-4" /> Santiago, Chile
-              </p>
-              <p className="flex items-center gap-2">
-                <Phone className="w-4 h-4" /> +56 2 1234 5678
-              </p>
-              <p className="flex items-center gap-2">
-                <Mail className="w-4 h-4" /> hola@linea.cl
-              </p>
+            <h3 className="footer-title mb-4 text-white">Enlaces</h3>
+            <div className="flex flex-col gap-2 text-sm">
+              <Link href="/" className="hover:text-blue-400 transition-colors">
+                Inicio
+              </Link>
+              <Link
+                href="/productos"
+                className="hover:text-blue-400 transition-colors"
+              >
+                Productos
+              </Link>
+              <Link
+                href="/contacto"
+                className="hover:text-blue-400 transition-colors"
+              >
+                Contacto
+              </Link>
+              <Link
+                href="/carro"
+                className="hover:text-blue-400 transition-colors"
+              >
+                Mi Carro
+              </Link>
             </div>
           </div>
 
-          {/* Products hint */}
+          {/* Contact */}
           <div>
-            <h3 className="footer-title mb-4 text-white">Productos</h3>
-            <div className="space-y-2 text-sm">
-              <p>Sillas</p>
-              <p>Mesas</p>
-              <p>Contenedores de basura</p>
+            <h3 className="footer-title mb-4 text-white">Contacto</h3>
+            <div className="space-y-3 text-sm">
+              <p className="flex items-center gap-3">
+                <MapPin className="w-4 h-4 text-blue-400" /> Santiago, Chile
+              </p>
+              <p className="flex items-center gap-3">
+                <Phone className="w-4 h-4 text-blue-400" /> +56 9 1234 5678
+              </p>
+              <p className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-blue-400" />{" "}
+                contacto@lineasoluciones.cl
+              </p>
             </div>
           </div>
 

@@ -27,8 +27,8 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-12">
             {[
               { href: "/", label: "Inicio" },
-              { href: "/products", label: "Catalogo" },
-              { href: "/contact", label: "Contacto" },
+              { href: "/productos", label: "Productos" },
+              { href: "/contacto", label: "Contacto" },
             ].map(({ href, label }) => (
               <Link
                 key={href}
@@ -48,7 +48,7 @@ export default function Navbar() {
             </button>
 
             <Link
-              href="/cart"
+              href="/carro"
               className="relative p-2 text-stone-500 hover:text-stone-900 transition-colors duration-300"
             >
               <ShoppingCart className="w-4 h-4" />
@@ -78,8 +78,7 @@ export default function Navbar() {
             <div className="flex flex-col gap-6 items-center">
               {[
                 { href: "/", label: "Inicio" },
-                { href: "/products", label: "Colecciones" },
-                { href: "/about", label: "Estudio" },
+                { href: "/products", label: "Productos" },
                 { href: "/contact", label: "Contacto" },
               ].map(({ href, label }) => (
                 <Link

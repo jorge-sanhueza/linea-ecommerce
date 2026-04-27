@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight, Package, ShoppingBag } from "lucide-react";
+import Link from "next/link";
 
 export default function CTASection() {
   return (
@@ -35,13 +36,21 @@ export default function CTASection() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition flex items-center justify-center gap-2 group">
+                <Link
+                  href="/contacto"
+                  className="bg-white text-gray-900 px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition flex items-center justify-center gap-2 group"
+                >
                   Solicitar cotización
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </button>
-                <button className="border border-white/30 text-white px-6 py-3 rounded-full font-medium hover:bg-white/10 transition">
+                </Link>
+
+                {/* Second Button -> /productos */}
+                <Link
+                  href="/productos"
+                  className="border border-white/30 text-white px-6 py-3 rounded-full font-medium hover:bg-white/10 transition inline-block text-center"
+                >
                   Ver productos
-                </button>
+                </Link>
               </div>
             </div>
 

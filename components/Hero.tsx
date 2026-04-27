@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { TrendingUp, Truck, MapPin, Phone, Globe } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -118,7 +119,10 @@ export default function Hero() {
                 </div>
               </div>
 
-              <button className="btn-primary group gap-8">
+              <Link
+                href="/productos"
+                className="btn-primary group gap-8 flex items-center"
+              >
                 Ver catálogo
                 <svg
                   className="w-4 h-4 transition-transform group-hover:translate-x-1"
@@ -132,7 +136,7 @@ export default function Hero() {
                     d="M17 12H7M17 12L13 8M17 12L13 16"
                   />
                 </svg>
-              </button>
+              </Link>
             </div>
           </div>
 
